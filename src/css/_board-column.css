@@ -1,0 +1,23 @@
+.board-column, .board-column__btn { border-radius: 0.25rem; }
+
+.board-column {
+    background-color: #d1d5db;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.board-column > * { padding: 0.5rem; }
+
+.board-column__title { font-size: 1rem; line-height: 1.5; }
+
+.board-column__cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    overflow-y: auto;
+}
+
+.board-column__card {}
+
+.board-column__btn { display: block; width: 100%; }
+
+.board-column__btn:hover { background-color: #9ca3af; cursor: pointer; }
