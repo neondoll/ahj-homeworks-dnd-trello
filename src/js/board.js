@@ -7,7 +7,6 @@ export default class Board {
     }
 
     this._container = container;
-    this._columns = [];
   }
 
   addColumn(title) {
@@ -16,7 +15,7 @@ export default class Board {
 
     column._element.classList.add('board__column');
 
-    this._columns.push(column);
+    return column;
   }
 
   checkBinding() {

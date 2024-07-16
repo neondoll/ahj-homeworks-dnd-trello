@@ -18,9 +18,26 @@ export default class BoardCard {
 
     const element = document.createElement('article');
     element.classList.add('board-card');
-    element.innerHTML = `<h3 class="board-card__title">${title}</h3>`;
+    element.innerHTML = `
+      <h3 class="board-card__title">${title}</h3>
+      <button class="board-card__btn-close hidden">✕</button>
+    `;
 
     this._element = element;
     this._container.appendChild(element);
+
+    this._btnClose = this._element.querySelector(BoardCard.btnCloseSelector);
+
+    this._btnClose.addEventListener('click', () => {
+      this._element.remove();
+    });
+    this._element.addEventListener('mouseout', () => {
+      this._btnClose.classList.add('hidden');
+    });
+    this._element.addEventListener('mouseover', () => {
+      this._btnClose.classList.remove('hidden');
+    });
   }
+
+  static get btnCloseSelector() { return '.board-card__btn-close'; }
 }

@@ -1,23 +1,67 @@
-.board-column, .board-column__btn { border-radius: 0.25rem; }
+.board-column,
+.board-column__btn-submit,
+.board-column__btn-reset,
+.board-column__btn { border-radius: 0.25rem; }
 
 .board-column {
     background-color: #d1d5db;
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 }
 
-.board-column > * { padding: 0.5rem; }
+.board-column > * { padding-right: 0.5rem; padding-left: 0.5rem; }
 
-.board-column__title { font-size: 1rem; line-height: 1.5; }
+.board-column__title { padding-top: 0.5rem; font-size: 1rem; line-height: 1.5; }
 
 .board-column__cards {
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     overflow-y: auto;
 }
 
 .board-column__card {}
 
-.board-column__btn { display: block; width: 100%; }
+.board-column__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    padding-bottom: 0.5rem;
+}
 
-.board-column__btn:hover { background-color: #9ca3af; cursor: pointer; }
+.board-column__form.hidden { display: none; }
+
+.board-column__textarea {
+    display: block;
+    width: 100%;
+    padding: calc(0.5rem - 1px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    background-color: #ffffff;
+    border-radius: 0.25rem;
+    border: 1px solid #ffffff;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.board-column__textarea.invalid { border-color: #ef4444; }
+
+.board-column__btn-group { display: flex; column-gap: 0.5rem; }
+
+.board-column__btn-submit,
+.board-column__btn-reset,
+.board-column__btn-add { padding: 0.5rem; font-size: 1rem; line-height: 1; cursor: pointer; }
+
+.board-column__btn-submit { font-weight: 500; color: #ffffff; background-color: #22c55e; }
+
+.board-column__btn-submit:hover { background-color: #16a34a; }
+
+.board-column__btn-reset { width: 2rem; font-weight: 700; }
+
+.board-column__btn-reset:hover,
+.board-column__btn-add:hover { background-color: #9ca3af; }
+
+.board-column__btn-add { display: block; width: 100%; }
+
+.board-column__btn-add.hidden { display: none; }
