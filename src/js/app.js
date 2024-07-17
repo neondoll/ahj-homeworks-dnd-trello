@@ -8,12 +8,5 @@ document.addEventListener('DOMContentLoaded', () => {
   trello.drawUI();
   trello.addEventListeners();
 
-  // const board = new Board(container);
-  // board.drawUI();
-  //
-  // const column1 = board.addColumn('TODO');
-  // board.addColumn('IN PROGRESS');
-  // board.addColumn('DONE');
-  //
-  // column1.addCard('Welcome to Trello!');
+  // Template card title: 'Welcome to Trello!'
 });
